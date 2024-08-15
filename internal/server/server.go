@@ -6,12 +6,12 @@ import (
 	"os"
 )
 
-func NewServer() http.Server {
+func NewServer() *http.Server {
 	port := os.Getenv("PORT")
 	if port == "" {
 		log.Fatal("port not found")
 	}
-	server := http.Server{
+	server := &http.Server{
 		Addr:    ":" + port,
 		Handler: GetRouter(),
 	}
