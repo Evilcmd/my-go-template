@@ -1,0 +1,1 @@
+-- queries related to table1
